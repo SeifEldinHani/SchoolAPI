@@ -19,6 +19,9 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'age',
+        'sex',
+        'role',
         'email',
         'password',
     ];
@@ -47,7 +50,7 @@ class User extends Authenticatable
     }
     public function classrooms()
     {
-        return $this->hasMany(classroom::class); 
+        return $this->belongsToMany(classroom::class); 
     }
     public function grades()
     {
@@ -55,7 +58,7 @@ class User extends Authenticatable
     }
     public function schools()
     {
-        return $this->hasMany(School::class); 
+        return $this->belongsToMany(School::class); 
     }
     public function students()
     {

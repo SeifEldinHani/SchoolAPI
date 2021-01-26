@@ -15,16 +15,25 @@ class GradeController extends Controller
     }
     public function read($grade_id)
     {
-        if (auth()->user()->grades()->where("id" , $grade_id)->exists())
-        return response()->json(auth()->user()->grades()->find($grade_id) , 200);
+        if (Grade::where("id" , $grade_id)->exists())
+        {
+            if (auth()->user()->can("view" , Grade::class))
+                return response()->json(auth()->user()->grades()->find($grade_id) , 200);
+            else 
+                return response()->json([
+                    "Message" => "Not Authorized"
+                ],403); 
+        }
         else
-        return response()->json([
-            "message" => "Not found"
-        ], 404); 
+            return response()->json([
+                "message" => "Not found"
+            ], 404); 
     }
     public function create()
     {
-        auth()->user()->grades()->create(request()->validate(
+        if (auth()->user()->can("create" , Grade::class)) 
+        {
+            auth()->user()->grades()->create(request()->validate(
             [
                 'gradename' => 'required',
                 'School_id' => ['required', 'exists:schools,id']
@@ -35,13 +44,31 @@ class GradeController extends Controller
                 "message" => "Grade Created"
             ]
             , 201); 
+        }
+        else
+            return response()->json([
+                "message" => "Not Authorized"
+            ], 403);  
+
 
     }
     public function delete($grade_id)
     {
-        if (auth()->user()->grades()->where("id" , $grade_id)->exists())
-        auth()->user()->grades()->find($grade_id)->delete();
-        
+        if (Grade::where('id' , $grade_id))
+        {
+            if (auth()->user()->can("delete" , Grade::class))
+            {
+            Grade::find($grade_id)->delete();
+            return response()->json([
+                "message" => "Deleted"
+              ], 202);
+            }
+            else
+                return response()->json([
+                    "message" => "Not found"
+                ], 404);   
+            
+        }
         else
             return response()->json([
                 "message" => "Not found"
@@ -50,26 +77,25 @@ class GradeController extends Controller
     }
     public function edit($grade_id)
     {
-        if (auth()->user()->grades()->where("id" , $grade_id)->exists())
-        auth()->user()->grades()->find($grade_id)->update(request()->validate(
-            [
-                'gradename' => 'required',
-                'School_id' => ['required', 'exists:schools,id']
-            ]));
+        if (Grade::where("id" , $grade_id)->exists())
+        {
+            if (auth()->user()->can("update" , Grade::class))
+
+                Grade::find($grade_id)->update(request()->validate(
+                [
+                    'gradename' => 'required',
+                    'School_id' => ['required', 'exists:schools,id']
+                ]));
+            else
+                return response()->json([
+                    "message" => "Not found"
+                ], 404);  
+
+        }
         else
             return response()->json([
                 "message" => "Not found"
             ], 404); 
             
-    }
-    public function getclasses($grade_id)
-    {
-        if (auth()->user()->grades()->where("id" , $grade_id)->exists())
-        return auth()->user()->grades()->find($grade_id)->classrooms;
-        else
-        return response()->json([
-            "message" => "Not found"
-        ], 404); 
-
     }
 }

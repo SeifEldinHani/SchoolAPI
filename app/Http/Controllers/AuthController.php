@@ -9,9 +9,11 @@ class AuthController extends Controller
 {
     public function register(){
 
- 
         $valid = request()->validate([
             'name' => "required",
+            'age' => 'required', 
+            'sex' => 'required', 
+            'role' => 'required', 
             'email' => "required|email|unique:users",
             'password' => "required|min:8",
         ]);
@@ -21,12 +23,13 @@ class AuthController extends Controller
 
             'name' => $valid['name'] , 
             'email' => $valid['email'] , 
+            'age' => $valid['age'],
+            'sex' => $valid['sex'],
+            'role' => $valid['role'], 
             'password' => bcrypt($valid['password'])
         ]);
  
-        $token = $user->createToken('Token')->accessToken;
- 
-        return response()->json(['token' => $token], 200);
+        return response()->json(['Message' => "User Registered"], 200);
     }
  
     public function login(){
@@ -39,7 +42,7 @@ class AuthController extends Controller
              $token = Auth::user()->createToken('Token')->accessToken;
              return response()->json(['token' => $token], 200);
          }else{
-             return response()->json(['error' => 'UnAuthorized'], 401);
+             return response()->json(['error' => 'Login Failed'], 401);
          }
     }
  
@@ -47,18 +50,15 @@ class AuthController extends Controller
         return response()->json(['user' => auth()->user()], 200);
         
     }
+    public function delete($User_id)
+    {
+        if (User::where("id" , $User_id)->exists())
+        {
+        User::find($User_id)->delete(); 
+        return response()->json([
+            "Message" => "Deleted"
+        ], 202);
+        }
 
-    public function test()
-    {
-        return response()->json([
-            "Test" =>"Done"
-        ]); 
-    }
-    
-    public function test1()
-    {
-        return response()->json([
-            "Test1" =>"Done"
-        ]); 
     }
 }

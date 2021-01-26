@@ -18,8 +18,7 @@ class CreateSchoolsTable extends Migration
             $table->timestamps();
             $table->string("School Name");
             $table->string("Location");
-            $table->unsignedBigInteger("user_id"); 
-            $table->foreign("user_id")->references("id")->on("users")->onDelete("cascade"); 
+
         });
     }
 

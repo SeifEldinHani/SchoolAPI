@@ -5,118 +5,97 @@ namespace App\Http\Controllers;
 use App\Models\attendance;
 use App\Models\classroom;
 use App\Models\Student;
-use App\Models\Teacher; 
+use App\Models\Teacher;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class TeacherController extends Controller
 {
-
     public function index()
     {
-        $Teacher = auth()->user()->teachers;
-        return response()->json($Teacher, 200);
+        if (auth()->user()->can("viewAny" , Teacher::class))
+            return response()->json(User::where("role" , "teacher")->get(), 200); 
+        else 
+            return response()->json([
+                "Message" => "Not Authorized"
+            ],403); 
     }
-
-
-    public function read(Teacher $Teacher_id)
+    public function read($teacher_id)
     {
-        if(auth()->user()->teachers()->where('id' , $Teacher_id)->exists())
-            return response()->json(auth()->user()->teachers()->find($Teacher_id), 200);
-        else
-        return response()->json([
-            "message" => "Not found"
-          ], 404);
-    }
 
-    public function create()
-    {
-        auth()->user()->teachers()->create(request()->validate(
-            [
-                'name' => 'required',
-                'sex' => 'required',
-                'age' =>'required', 
-                'School_id' => ['required' , 'exists:schools,id'] 
-            ])); 
-        return response()->json([
-            "message" => "Created"
-          ], 201);
+        if (User::where('id' , $teacher_id)->exists() &&  User::find($teacher_id)->role == "teacher")
+
+            if (auth()->user()->can("viewAny" , Teacher::class))
+                return response()->json(User::find($teacher_id), 200); 
+            else 
+                return response()->json([
+                    "Message" => "Not Authorized"
+                ],403);
+            else{
+                    return response()->json([
+                        "Message" => "Not Found"
+                    ],404); 
+                }                
+                
     }
     public function setClassroom($Teacher_id , $classroom_id)
     {
-        if(auth()->user()->teachers()->where('id' , $Teacher_id)->exists() && auth()->user()->classrooms()->where('id' , $classroom_id)->exists() )
+        if (classroom::where("id" , $classroom_id)->exists() && (User::where('id' , $Teacher_id)->exists() && User::find($Teacher_id)->role == "teacher"))
         {
-            auth()->user()->teachers()->find($Teacher_id)->classrooms()->attach($classroom_id);  
+        if(auth()->user()->can("setClassroom", Teacher::class) && !User::find($Teacher_id)->classrooms->contains(classroom::find($classroom_id)))
+        {
+            User::find($Teacher_id)->classrooms()->attach($classroom_id);  
+            User::find($Teacher_id)->schools()->attach(classroom::find($classroom_id)->School_id);
             return response()->json([
                 "Message" => "Classroom set"
-            ] , 200); 
+            ] , 201); 
         }
-        else
+        else 
             return response()->json([
-            "message" => "Not found"
-          ], 404);
+                "Message" => "Not Authorized"
+            ],403); 
+        }
+        else{
+            return response()->json([
+                "Message" => "Not Found"
+            ],404); 
+        }
 
     }
-    public function delete($Teacher_id)
+    public function getStudents($class_id)
     {
-        if(auth()->user()->teachers()->where('id' , $Teacher_id)->exists())
+        if(classroom::where('id' , $class_id)->exists())
         {
-            auth()->user()->teachers()->find($Teacher_id)->delete();
-            return response()->json([
-                "message" => "Deleted"
-              ], 202);
-        }
-        else
-            return response()->json([
-            "message" => "Not found"
-          ], 404);
-
-    }
-    public function edit($Teacher_id)
-    {
-        if(auth()->user()->teachers()->where('id' , $Teacher_id)->exists()){
-            auth()->user()->teachers()->find($Teacher_id)->update(request()->validate(
-                [
-                'name' => 'required',
-                'sex' => 'required',
-                'age' =>'required'
-
-                ]));
-
-            return response()->json([
-                "message" => "Updated"
-              ], 200);    
+            if (auth()->user()->can('getStudents' , classroom::find($class_id))) 
+                return response()->json(classroom::find($class_id)->students);
+            else 
+                return response()->json([
+                    "Message" => "Not Authorized"
+                ],403); 
         }
         else
         return response()->json([
             "message" => "Not found"
           ], 404);
-
-                    
     }
-
-    public function getStudents($Teacher_id , $class_id)
+    public function attendance($class_id , $student_id)
     {
-        if(auth()->user()->teachers()->where('id' , $Teacher_id)->exists())
-        return response()->json(auth()->user()->teachers()->find($Teacher_id)->classrooms->where('id' , $class_id)->first()->Students, 200);
 
-
+        if (classroom::where("id" , $class_id)->exists() && classroom::find($class_id)->students->contains(Student::find($student_id)) )
+            $student = classroom::find($class_id)->first()->students->find($student_id); 
         else
-        return response()->json([
-            "message" => "Not found"
-          ], 404);
-    }
-    public function attendance($Teacher_id  , $class_id , $student_id)
-    {
-        if(auth()->user()->teachers()->where('id' , $Teacher_id)->exists() && auth()->user()->students()->where('id' , $student_id)->exists() && auth()->user()->classrooms()->where('id' , $class_id)->exists()){
-        $student = auth()->user()->teachers()->find($Teacher_id)->classrooms->find($class_id)->first()->students->find($student_id)->first(); 
+            return response()->json([
+                "message" => "Not found"
+              ], 404); 
 
         $req = request()->validate([
             'Attendance' => 'required|boolean', 
             'date' => 'required|date'
         ]); 
 
-
-        auth()->user()->attendances()->create(
+        if (auth()->user()->can("setAttendance" ,classroom::find($class_id)))
+        {
+            auth()->user()->attendances()->create(
             [
                 'student_id' => $student->id, 
                 'student_name' => $student->name,
@@ -124,17 +103,15 @@ class TeacherController extends Controller
                 'date' => $req['date']
             ]
         ); 
-        return response()->json([
-            "Message" => "Attendance Created"
-        ], 201); 
-    }
-
-    else{
-        return response()->json([
-            "message" => "Not found"
-          ], 404);
-    }
-
-
-    }
+            return response()->json([
+            
+                "Message" => "Attendance Created"
+            
+            ], 201); 
+        }
+        else
+            return response()->json([
+                "Message" => "Not Authorized"
+            ],403);  
+}
 }

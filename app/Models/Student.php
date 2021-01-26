@@ -9,7 +9,7 @@ class Student extends Model
 {
     use HasFactory;
     protected $guarded = ["id"]; 
-    protected $fillable =["name" , "sex" , "age" , "classroom_id" , "School_id" , "grade_id" , "parentt_id"];
+    protected $fillable =["name" , "sex" , "age" , "classroom_id" , "School_id" , "grade_id"];
     public function classrooms()
     {
         return $this->belongsTo(Classroom::class); 
@@ -21,10 +21,6 @@ class Student extends Model
     public function School()
     {
         return $this->belongsTo(Student::class); 
-    }
-    public function Parentt()
-    {
-        return $this->belongsTo(Parentt::class); 
     }
     public function user()
     {

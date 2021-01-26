@@ -22,9 +22,6 @@ class CreateClassroomsTable extends Migration
             $table->timestamps();
             $table->foreign('grade_id')->references('id')->on('grades')->onDelete('cascade'); 
             $table->foreign('School_id')->references('id')->on('schools')->onDelete('cascade'); 
-            $table->unsignedBigInteger("user_id"); 
-            $table->foreign("user_id")->references("id")->on("users")->onDelete("cascade"); 
-
         });
     }
 

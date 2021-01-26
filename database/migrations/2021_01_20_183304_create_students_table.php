@@ -27,12 +27,10 @@ class CreateStudentsTable extends Migration
             $table->unsignedBigInteger("classroom_id");
             $table->unsignedBigInteger("School_id"); 
             $table->unsignedBigInteger("grade_id"); 
-            $table->unsignedBigInteger("parentt_id"); 
             $table->unsignedBigInteger("user_id"); 
             $table->foreign("classroom_id")->references("id")->on("classrooms")->onDelete("cascade"); 
             $table->foreign("School_id")->references("id")->on("schools")->onDelete("cascade"); 
             $table->foreign("grade_id")->references("id")->on("grades")->onDelete("cascade"); 
-            $table->foreign("parentt_id")->references("id")->on("parentts")->onDelete("cascade"); 
             $table->foreign("user_id")->references("id")->on("users")->onDelete("cascade"); 
         });
     }
