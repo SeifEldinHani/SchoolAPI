@@ -1,0 +1,798 @@
+{
+	"info": {
+		"_postman_id": "bfc5adef-ad84-4c92-bcdb-56dde92e1d03",
+		"name": "School API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"item": [
+				{
+					"name": "localhost:8000/api/register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin@example.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Seif",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "32",
+									"type": "text"
+								},
+								{
+									"key": "sex",
+									"value": "male",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8000/api/register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjk3ZjM1YTU0ZTljZmEwYWIyNjRjMzQ2ZTcwNTY5ODNlYWNjMWE5MDVlNWU4M2Q0YzBkYjEyMzRmMDY4ZWJjMjY2ZDJjZDRlMWVkOTBjMzMiLCJpYXQiOiIxNjExNjYzMzc3LjE0ODc1NiIsIm5iZiI6IjE2MTE2NjMzNzcuMTQ4NzYxIiwiZXhwIjoiMTY0MzE5OTM3Ny4xMjQ0ODMiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Q_iEJAFr_AMHR3LMtToNETfCXeKkxiYniwHZ-8RoZHWivgITrTlDCeMeiw2UMNlgK2y73BHWE0yDncqbdBl2QrXSCa82Q9R-eztbfgfVJJKtmi_Rq7PWRrSBcOY5kyDbfg0JUHWHiV69R6uWqatwlneqV9RH00lEu8D6Ie-zGS2JADMfdwykytJxrhwahIxK4bg8rQqn1865c4rhfu8pjqCaM-8-1MxOM6za-0-ZbUSCFKQmssjDqBu87G_nkmA05WNkyaQbm7YPd87x6D8myJg2DqOnmXhWkXYxCvrcvxIhKwWJxHW4AU276WEZH_Vgb4XV_do4Yv-KdaIw8lJmdpYoZ_5SZ2c4r4oCpttTG6zeNZd2uEIQL9K3VarLTtS0u3R0iIp3SbrEWvuoXD5NSePoOBT2tFVULjVRl1_8JzCMH1xL7dQw9L7Cojh4Kdv37cGklbUYSjvZSIZ447ve4Xg2sjrQnt8cc9XFroMXtuQpJUOAdYFeeB7DtwFOH9q1DvWOejyzTpKSZoz2DNOCN5Sk5t6y1cOaOr3RjmUzSMKnRVFzsLkzT7wBe_I_YbX4wi2KnRNB_xwE-RDh_2f0WZh973Bkdev03dxBge_9YjZEUpK8H_AWhwoIlmYanlVcm4seJlswviKElKptw15356guUE9QZIkMhFano0kyD_E",
+								"description": "admin",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "teacher@example.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "teacher",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Seif",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "32",
+									"type": "text"
+								},
+								{
+									"key": "sex",
+									"value": "male",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8000/api/register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjk3ZjM1YTU0ZTljZmEwYWIyNjRjMzQ2ZTcwNTY5ODNlYWNjMWE5MDVlNWU4M2Q0YzBkYjEyMzRmMDY4ZWJjMjY2ZDJjZDRlMWVkOTBjMzMiLCJpYXQiOiIxNjExNjYzMzc3LjE0ODc1NiIsIm5iZiI6IjE2MTE2NjMzNzcuMTQ4NzYxIiwiZXhwIjoiMTY0MzE5OTM3Ny4xMjQ0ODMiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Q_iEJAFr_AMHR3LMtToNETfCXeKkxiYniwHZ-8RoZHWivgITrTlDCeMeiw2UMNlgK2y73BHWE0yDncqbdBl2QrXSCa82Q9R-eztbfgfVJJKtmi_Rq7PWRrSBcOY5kyDbfg0JUHWHiV69R6uWqatwlneqV9RH00lEu8D6Ie-zGS2JADMfdwykytJxrhwahIxK4bg8rQqn1865c4rhfu8pjqCaM-8-1MxOM6za-0-ZbUSCFKQmssjDqBu87G_nkmA05WNkyaQbm7YPd87x6D8myJg2DqOnmXhWkXYxCvrcvxIhKwWJxHW4AU276WEZH_Vgb4XV_do4Yv-KdaIw8lJmdpYoZ_5SZ2c4r4oCpttTG6zeNZd2uEIQL9K3VarLTtS0u3R0iIp3SbrEWvuoXD5NSePoOBT2tFVULjVRl1_8JzCMH1xL7dQw9L7Cojh4Kdv37cGklbUYSjvZSIZ447ve4Xg2sjrQnt8cc9XFroMXtuQpJUOAdYFeeB7DtwFOH9q1DvWOejyzTpKSZoz2DNOCN5Sk5t6y1cOaOr3RjmUzSMKnRVFzsLkzT7wBe_I_YbX4wi2KnRNB_xwE-RDh_2f0WZh973Bkdev03dxBge_9YjZEUpK8H_AWhwoIlmYanlVcm4seJlswviKElKptw15356guUE9QZIkMhFano0kyD_E",
+								"description": "admin",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTQxZjMzYzViZjgyZWM1ZmYzNDhiYjFkMmE5ZGRmMWU4ZGNmYmI5Y2RjNTI3NjI4MmFiYmU2ZjgzYzJlZmUxZjEwYzNhNjcwYmNjZjQwNTYiLCJpYXQiOiIxNjExNjYzNDUwLjYxNTQwNyIsIm5iZiI6IjE2MTE2NjM0NTAuNjE1NDIwIiwiZXhwIjoiMTY0MzE5OTQ1MC41OTU2NzYiLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.tDMwmkR9n92zIBpRd_RtU5Y1KKyoxDlR2FdB0EEuSELXTSFT3OoMYwWc25VA4Rs2841Jeku5u-Dsz6qhsF47X2RGe_iksYxhwHURq0djypih5j5krLkdW6nhJdxDGl1x1mvJFh7ci8bWc8OFX4LynI9BUZxqAxf7FPxeyOE0BlFzAIWLZ_n18e13YJ8CqlO_Z3P8YwYznxJT5Yjs_nonFFwP5BvxXjZbFB-tZ41rDZPioop1KN2Aj0AxwNF6iIm5E5SFZA1U6yFSyGsmqfnY-m0MTYPRDMoBfLR8P2iX6Ye-njxQJiiCUFORXK99WxzJMqK5ndbuISQI_9YwEBIAQQd5EcHrqiKsmGcv_xrWYMH4KJw3N20jmZ6NukZzYgcq5hRLtbjXFayyws3XLX42IrRUVTcoZcULDbQC4mh3FNx5OCVH1UvJyOK4AIQ_LleNtWbvBYBYU9h8K3-mMf1nGfE23TnRbtiKydC6ayk63_UpRaKF2-s9h2IYPcIY9oeWvsu8QEWGDem3segGpJJZDCJGls-3np4U78j5-SnbIUsny0Ol4IrYHD6xysqWbEdKHT-NUsj_EbDYD7Ip8tkOyqWf7DSDYCi2bwgtzFs1xdPOiAKbhIi_R9OIJDSWSQREWImfhnx3EhbEdGuDngWCSzK5zyCs49kVp2YaTDfo1ZM",
+								"description": "teacher",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "parent@example.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "parent",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Seif",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "32",
+									"type": "text"
+								},
+								{
+									"key": "sex",
+									"value": "male",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "localhost:8000/api/School/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjk3ZjM1YTU0ZTljZmEwYWIyNjRjMzQ2ZTcwNTY5ODNlYWNjMWE5MDVlNWU4M2Q0YzBkYjEyMzRmMDY4ZWJjMjY2ZDJjZDRlMWVkOTBjMzMiLCJpYXQiOiIxNjExNjYzMzc3LjE0ODc1NiIsIm5iZiI6IjE2MTE2NjMzNzcuMTQ4NzYxIiwiZXhwIjoiMTY0MzE5OTM3Ny4xMjQ0ODMiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Q_iEJAFr_AMHR3LMtToNETfCXeKkxiYniwHZ-8RoZHWivgITrTlDCeMeiw2UMNlgK2y73BHWE0yDncqbdBl2QrXSCa82Q9R-eztbfgfVJJKtmi_Rq7PWRrSBcOY5kyDbfg0JUHWHiV69R6uWqatwlneqV9RH00lEu8D6Ie-zGS2JADMfdwykytJxrhwahIxK4bg8rQqn1865c4rhfu8pjqCaM-8-1MxOM6za-0-ZbUSCFKQmssjDqBu87G_nkmA05WNkyaQbm7YPd87x6D8myJg2DqOnmXhWkXYxCvrcvxIhKwWJxHW4AU276WEZH_Vgb4XV_do4Yv-KdaIw8lJmdpYoZ_5SZ2c4r4oCpttTG6zeNZd2uEIQL9K3VarLTtS0u3R0iIp3SbrEWvuoXD5NSePoOBT2tFVULjVRl1_8JzCMH1xL7dQw9L7Cojh4Kdv37cGklbUYSjvZSIZ447ve4Xg2sjrQnt8cc9XFroMXtuQpJUOAdYFeeB7DtwFOH9q1DvWOejyzTpKSZoz2DNOCN5Sk5t6y1cOaOr3RjmUzSMKnRVFzsLkzT7wBe_I_YbX4wi2KnRNB_xwE-RDh_2f0WZh973Bkdev03dxBge_9YjZEUpK8H_AWhwoIlmYanlVcm4seJlswviKElKptw15356guUE9QZIkMhFano0kyD_E",
+								"description": "admin",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTQxZjMzYzViZjgyZWM1ZmYzNDhiYjFkMmE5ZGRmMWU4ZGNmYmI5Y2RjNTI3NjI4MmFiYmU2ZjgzYzJlZmUxZjEwYzNhNjcwYmNjZjQwNTYiLCJpYXQiOiIxNjExNjYzNDUwLjYxNTQwNyIsIm5iZiI6IjE2MTE2NjM0NTAuNjE1NDIwIiwiZXhwIjoiMTY0MzE5OTQ1MC41OTU2NzYiLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.tDMwmkR9n92zIBpRd_RtU5Y1KKyoxDlR2FdB0EEuSELXTSFT3OoMYwWc25VA4Rs2841Jeku5u-Dsz6qhsF47X2RGe_iksYxhwHURq0djypih5j5krLkdW6nhJdxDGl1x1mvJFh7ci8bWc8OFX4LynI9BUZxqAxf7FPxeyOE0BlFzAIWLZ_n18e13YJ8CqlO_Z3P8YwYznxJT5Yjs_nonFFwP5BvxXjZbFB-tZ41rDZPioop1KN2Aj0AxwNF6iIm5E5SFZA1U6yFSyGsmqfnY-m0MTYPRDMoBfLR8P2iX6Ye-njxQJiiCUFORXK99WxzJMqK5ndbuISQI_9YwEBIAQQd5EcHrqiKsmGcv_xrWYMH4KJw3N20jmZ6NukZzYgcq5hRLtbjXFayyws3XLX42IrRUVTcoZcULDbQC4mh3FNx5OCVH1UvJyOK4AIQ_LleNtWbvBYBYU9h8K3-mMf1nGfE23TnRbtiKydC6ayk63_UpRaKF2-s9h2IYPcIY9oeWvsu8QEWGDem3segGpJJZDCJGls-3np4U78j5-SnbIUsny0Ol4IrYHD6xysqWbEdKHT-NUsj_EbDYD7Ip8tkOyqWf7DSDYCi2bwgtzFs1xdPOiAKbhIi_R9OIJDSWSQREWImfhnx3EhbEdGuDngWCSzK5zyCs49kVp2YaTDfo1ZM",
+								"description": "teacher",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjhmNTJmNzYxYTdmNGQyZjBmNjM4Y2QwMzg5N2U5YWFhNzZjZThlYjFhY2ZmYjk3MjJkZGM3ZTg2NTc0NzViZmQ1MGMxNmVmYzhmYWNmMTQiLCJpYXQiOiIxNjExNjYzNDk5LjMzMzk0MSIsIm5iZiI6IjE2MTE2NjM0OTkuMzMzOTUyIiwiZXhwIjoiMTY0MzE5OTQ5OS4zMTg5ODAiLCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.uJKCYm8DK5u8EhpD0f0-zfSrQRh48F5AhTgSDin4d0J7KxhojeNRqTwpZvUx5awoiJy5TLW614M4SEtjalwzt-QLGxNqzvgTbVsaiilpbErI5NorYjXaeHmAfx6AvKLiRNFfpJTmQrde7K2VxzN6RstlGrBCcSCHrSabzb24LEamNXkhHuAwIjTKxLVHocQmokoJpDC4oQ5sEpTyqY7g_TpWBoqCTK7vvFBgESwjbaNJJ9eLJ9DyaRmzCDf0o4yNGh9VBJhwO4swDPgFmxqfBZfns7n2rPaF_2aHuRCqbZrT1X-caHwmO6r62zm9KT-7m4kSCqvi1KLsxapcueZEzanRse4NHa4e2pbWQVR1b4GbdUeC8MGxth_Q5O8tJQ77BSSja5Tm5sadvOuEIsBs6YIXqLWoaXhGJSLSPvfSoY_aHB4v_oe6y_54nO5Lve4HXRfZHkas17k1lRmMnLvlxD4W307sadAvdzHIxrCtcMsXu7AIx_UOSaGjdkxjEEu2vSlL5D7dT8OV6b6ElKgHzT8lL6fbyvAHWt9ca_6mvgGv13cJ143W2KesPzUMXHO9R163UGLLW34KZmdqVz788YAM7SuI-QIq0rgrwelBQbJdES-izhazKSnuPRmO-cYhb--9cdfPPmi9adnumJ2gLcO4Rkn9NumLNR5j3JlGMk8",
+								"description": "parent",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"School Name\" : \"QLS\",\r\n    \"Location\" : \"Egypt\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/School/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"School",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8000/api/Grades/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjk3ZjM1YTU0ZTljZmEwYWIyNjRjMzQ2ZTcwNTY5ODNlYWNjMWE5MDVlNWU4M2Q0YzBkYjEyMzRmMDY4ZWJjMjY2ZDJjZDRlMWVkOTBjMzMiLCJpYXQiOiIxNjExNjYzMzc3LjE0ODc1NiIsIm5iZiI6IjE2MTE2NjMzNzcuMTQ4NzYxIiwiZXhwIjoiMTY0MzE5OTM3Ny4xMjQ0ODMiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Q_iEJAFr_AMHR3LMtToNETfCXeKkxiYniwHZ-8RoZHWivgITrTlDCeMeiw2UMNlgK2y73BHWE0yDncqbdBl2QrXSCa82Q9R-eztbfgfVJJKtmi_Rq7PWRrSBcOY5kyDbfg0JUHWHiV69R6uWqatwlneqV9RH00lEu8D6Ie-zGS2JADMfdwykytJxrhwahIxK4bg8rQqn1865c4rhfu8pjqCaM-8-1MxOM6za-0-ZbUSCFKQmssjDqBu87G_nkmA05WNkyaQbm7YPd87x6D8myJg2DqOnmXhWkXYxCvrcvxIhKwWJxHW4AU276WEZH_Vgb4XV_do4Yv-KdaIw8lJmdpYoZ_5SZ2c4r4oCpttTG6zeNZd2uEIQL9K3VarLTtS0u3R0iIp3SbrEWvuoXD5NSePoOBT2tFVULjVRl1_8JzCMH1xL7dQw9L7Cojh4Kdv37cGklbUYSjvZSIZ447ve4Xg2sjrQnt8cc9XFroMXtuQpJUOAdYFeeB7DtwFOH9q1DvWOejyzTpKSZoz2DNOCN5Sk5t6y1cOaOr3RjmUzSMKnRVFzsLkzT7wBe_I_YbX4wi2KnRNB_xwE-RDh_2f0WZh973Bkdev03dxBge_9YjZEUpK8H_AWhwoIlmYanlVcm4seJlswviKElKptw15356guUE9QZIkMhFano0kyD_E",
+								"description": "admin",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTQxZjMzYzViZjgyZWM1ZmYzNDhiYjFkMmE5ZGRmMWU4ZGNmYmI5Y2RjNTI3NjI4MmFiYmU2ZjgzYzJlZmUxZjEwYzNhNjcwYmNjZjQwNTYiLCJpYXQiOiIxNjExNjYzNDUwLjYxNTQwNyIsIm5iZiI6IjE2MTE2NjM0NTAuNjE1NDIwIiwiZXhwIjoiMTY0MzE5OTQ1MC41OTU2NzYiLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.tDMwmkR9n92zIBpRd_RtU5Y1KKyoxDlR2FdB0EEuSELXTSFT3OoMYwWc25VA4Rs2841Jeku5u-Dsz6qhsF47X2RGe_iksYxhwHURq0djypih5j5krLkdW6nhJdxDGl1x1mvJFh7ci8bWc8OFX4LynI9BUZxqAxf7FPxeyOE0BlFzAIWLZ_n18e13YJ8CqlO_Z3P8YwYznxJT5Yjs_nonFFwP5BvxXjZbFB-tZ41rDZPioop1KN2Aj0AxwNF6iIm5E5SFZA1U6yFSyGsmqfnY-m0MTYPRDMoBfLR8P2iX6Ye-njxQJiiCUFORXK99WxzJMqK5ndbuISQI_9YwEBIAQQd5EcHrqiKsmGcv_xrWYMH4KJw3N20jmZ6NukZzYgcq5hRLtbjXFayyws3XLX42IrRUVTcoZcULDbQC4mh3FNx5OCVH1UvJyOK4AIQ_LleNtWbvBYBYU9h8K3-mMf1nGfE23TnRbtiKydC6ayk63_UpRaKF2-s9h2IYPcIY9oeWvsu8QEWGDem3segGpJJZDCJGls-3np4U78j5-SnbIUsny0Ol4IrYHD6xysqWbEdKHT-NUsj_EbDYD7Ip8tkOyqWf7DSDYCi2bwgtzFs1xdPOiAKbhIi_R9OIJDSWSQREWImfhnx3EhbEdGuDngWCSzK5zyCs49kVp2YaTDfo1ZM",
+								"description": "teacher",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjhmNTJmNzYxYTdmNGQyZjBmNjM4Y2QwMzg5N2U5YWFhNzZjZThlYjFhY2ZmYjk3MjJkZGM3ZTg2NTc0NzViZmQ1MGMxNmVmYzhmYWNmMTQiLCJpYXQiOiIxNjExNjYzNDk5LjMzMzk0MSIsIm5iZiI6IjE2MTE2NjM0OTkuMzMzOTUyIiwiZXhwIjoiMTY0MzE5OTQ5OS4zMTg5ODAiLCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.uJKCYm8DK5u8EhpD0f0-zfSrQRh48F5AhTgSDin4d0J7KxhojeNRqTwpZvUx5awoiJy5TLW614M4SEtjalwzt-QLGxNqzvgTbVsaiilpbErI5NorYjXaeHmAfx6AvKLiRNFfpJTmQrde7K2VxzN6RstlGrBCcSCHrSabzb24LEamNXkhHuAwIjTKxLVHocQmokoJpDC4oQ5sEpTyqY7g_TpWBoqCTK7vvFBgESwjbaNJJ9eLJ9DyaRmzCDf0o4yNGh9VBJhwO4swDPgFmxqfBZfns7n2rPaF_2aHuRCqbZrT1X-caHwmO6r62zm9KT-7m4kSCqvi1KLsxapcueZEzanRse4NHa4e2pbWQVR1b4GbdUeC8MGxth_Q5O8tJQ77BSSja5Tm5sadvOuEIsBs6YIXqLWoaXhGJSLSPvfSoY_aHB4v_oe6y_54nO5Lve4HXRfZHkas17k1lRmMnLvlxD4W307sadAvdzHIxrCtcMsXu7AIx_UOSaGjdkxjEEu2vSlL5D7dT8OV6b6ElKgHzT8lL6fbyvAHWt9ca_6mvgGv13cJ143W2KesPzUMXHO9R163UGLLW34KZmdqVz788YAM7SuI-QIq0rgrwelBQbJdES-izhazKSnuPRmO-cYhb--9cdfPPmi9adnumJ2gLcO4Rkn9NumLNR5j3JlGMk8",
+								"description": "parent",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"gradename\" : \"Grade 1\",\r\n    \"School_id\" : \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/Grades/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"Grades",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8000/api/Classes/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjk3ZjM1YTU0ZTljZmEwYWIyNjRjMzQ2ZTcwNTY5ODNlYWNjMWE5MDVlNWU4M2Q0YzBkYjEyMzRmMDY4ZWJjMjY2ZDJjZDRlMWVkOTBjMzMiLCJpYXQiOiIxNjExNjYzMzc3LjE0ODc1NiIsIm5iZiI6IjE2MTE2NjMzNzcuMTQ4NzYxIiwiZXhwIjoiMTY0MzE5OTM3Ny4xMjQ0ODMiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Q_iEJAFr_AMHR3LMtToNETfCXeKkxiYniwHZ-8RoZHWivgITrTlDCeMeiw2UMNlgK2y73BHWE0yDncqbdBl2QrXSCa82Q9R-eztbfgfVJJKtmi_Rq7PWRrSBcOY5kyDbfg0JUHWHiV69R6uWqatwlneqV9RH00lEu8D6Ie-zGS2JADMfdwykytJxrhwahIxK4bg8rQqn1865c4rhfu8pjqCaM-8-1MxOM6za-0-ZbUSCFKQmssjDqBu87G_nkmA05WNkyaQbm7YPd87x6D8myJg2DqOnmXhWkXYxCvrcvxIhKwWJxHW4AU276WEZH_Vgb4XV_do4Yv-KdaIw8lJmdpYoZ_5SZ2c4r4oCpttTG6zeNZd2uEIQL9K3VarLTtS0u3R0iIp3SbrEWvuoXD5NSePoOBT2tFVULjVRl1_8JzCMH1xL7dQw9L7Cojh4Kdv37cGklbUYSjvZSIZ447ve4Xg2sjrQnt8cc9XFroMXtuQpJUOAdYFeeB7DtwFOH9q1DvWOejyzTpKSZoz2DNOCN5Sk5t6y1cOaOr3RjmUzSMKnRVFzsLkzT7wBe_I_YbX4wi2KnRNB_xwE-RDh_2f0WZh973Bkdev03dxBge_9YjZEUpK8H_AWhwoIlmYanlVcm4seJlswviKElKptw15356guUE9QZIkMhFano0kyD_E",
+								"description": "admin",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTQxZjMzYzViZjgyZWM1ZmYzNDhiYjFkMmE5ZGRmMWU4ZGNmYmI5Y2RjNTI3NjI4MmFiYmU2ZjgzYzJlZmUxZjEwYzNhNjcwYmNjZjQwNTYiLCJpYXQiOiIxNjExNjYzNDUwLjYxNTQwNyIsIm5iZiI6IjE2MTE2NjM0NTAuNjE1NDIwIiwiZXhwIjoiMTY0MzE5OTQ1MC41OTU2NzYiLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.tDMwmkR9n92zIBpRd_RtU5Y1KKyoxDlR2FdB0EEuSELXTSFT3OoMYwWc25VA4Rs2841Jeku5u-Dsz6qhsF47X2RGe_iksYxhwHURq0djypih5j5krLkdW6nhJdxDGl1x1mvJFh7ci8bWc8OFX4LynI9BUZxqAxf7FPxeyOE0BlFzAIWLZ_n18e13YJ8CqlO_Z3P8YwYznxJT5Yjs_nonFFwP5BvxXjZbFB-tZ41rDZPioop1KN2Aj0AxwNF6iIm5E5SFZA1U6yFSyGsmqfnY-m0MTYPRDMoBfLR8P2iX6Ye-njxQJiiCUFORXK99WxzJMqK5ndbuISQI_9YwEBIAQQd5EcHrqiKsmGcv_xrWYMH4KJw3N20jmZ6NukZzYgcq5hRLtbjXFayyws3XLX42IrRUVTcoZcULDbQC4mh3FNx5OCVH1UvJyOK4AIQ_LleNtWbvBYBYU9h8K3-mMf1nGfE23TnRbtiKydC6ayk63_UpRaKF2-s9h2IYPcIY9oeWvsu8QEWGDem3segGpJJZDCJGls-3np4U78j5-SnbIUsny0Ol4IrYHD6xysqWbEdKHT-NUsj_EbDYD7Ip8tkOyqWf7DSDYCi2bwgtzFs1xdPOiAKbhIi_R9OIJDSWSQREWImfhnx3EhbEdGuDngWCSzK5zyCs49kVp2YaTDfo1ZM",
+								"description": "teacher",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjhmNTJmNzYxYTdmNGQyZjBmNjM4Y2QwMzg5N2U5YWFhNzZjZThlYjFhY2ZmYjk3MjJkZGM3ZTg2NTc0NzViZmQ1MGMxNmVmYzhmYWNmMTQiLCJpYXQiOiIxNjExNjYzNDk5LjMzMzk0MSIsIm5iZiI6IjE2MTE2NjM0OTkuMzMzOTUyIiwiZXhwIjoiMTY0MzE5OTQ5OS4zMTg5ODAiLCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.uJKCYm8DK5u8EhpD0f0-zfSrQRh48F5AhTgSDin4d0J7KxhojeNRqTwpZvUx5awoiJy5TLW614M4SEtjalwzt-QLGxNqzvgTbVsaiilpbErI5NorYjXaeHmAfx6AvKLiRNFfpJTmQrde7K2VxzN6RstlGrBCcSCHrSabzb24LEamNXkhHuAwIjTKxLVHocQmokoJpDC4oQ5sEpTyqY7g_TpWBoqCTK7vvFBgESwjbaNJJ9eLJ9DyaRmzCDf0o4yNGh9VBJhwO4swDPgFmxqfBZfns7n2rPaF_2aHuRCqbZrT1X-caHwmO6r62zm9KT-7m4kSCqvi1KLsxapcueZEzanRse4NHa4e2pbWQVR1b4GbdUeC8MGxth_Q5O8tJQ77BSSja5Tm5sadvOuEIsBs6YIXqLWoaXhGJSLSPvfSoY_aHB4v_oe6y_54nO5Lve4HXRfZHkas17k1lRmMnLvlxD4W307sadAvdzHIxrCtcMsXu7AIx_UOSaGjdkxjEEu2vSlL5D7dT8OV6b6ElKgHzT8lL6fbyvAHWt9ca_6mvgGv13cJ143W2KesPzUMXHO9R163UGLLW34KZmdqVz788YAM7SuI-QIq0rgrwelBQbJdES-izhazKSnuPRmO-cYhb--9cdfPPmi9adnumJ2gLcO4Rkn9NumLNR5j3JlGMk8",
+								"description": "parent",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"classname\" : \"Class 1A\",\r\n    \"grade_id\" : \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/Classes/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"Classes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8000/api/Parent/3/School/1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjk3ZjM1YTU0ZTljZmEwYWIyNjRjMzQ2ZTcwNTY5ODNlYWNjMWE5MDVlNWU4M2Q0YzBkYjEyMzRmMDY4ZWJjMjY2ZDJjZDRlMWVkOTBjMzMiLCJpYXQiOiIxNjExNjYzMzc3LjE0ODc1NiIsIm5iZiI6IjE2MTE2NjMzNzcuMTQ4NzYxIiwiZXhwIjoiMTY0MzE5OTM3Ny4xMjQ0ODMiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Q_iEJAFr_AMHR3LMtToNETfCXeKkxiYniwHZ-8RoZHWivgITrTlDCeMeiw2UMNlgK2y73BHWE0yDncqbdBl2QrXSCa82Q9R-eztbfgfVJJKtmi_Rq7PWRrSBcOY5kyDbfg0JUHWHiV69R6uWqatwlneqV9RH00lEu8D6Ie-zGS2JADMfdwykytJxrhwahIxK4bg8rQqn1865c4rhfu8pjqCaM-8-1MxOM6za-0-ZbUSCFKQmssjDqBu87G_nkmA05WNkyaQbm7YPd87x6D8myJg2DqOnmXhWkXYxCvrcvxIhKwWJxHW4AU276WEZH_Vgb4XV_do4Yv-KdaIw8lJmdpYoZ_5SZ2c4r4oCpttTG6zeNZd2uEIQL9K3VarLTtS0u3R0iIp3SbrEWvuoXD5NSePoOBT2tFVULjVRl1_8JzCMH1xL7dQw9L7Cojh4Kdv37cGklbUYSjvZSIZ447ve4Xg2sjrQnt8cc9XFroMXtuQpJUOAdYFeeB7DtwFOH9q1DvWOejyzTpKSZoz2DNOCN5Sk5t6y1cOaOr3RjmUzSMKnRVFzsLkzT7wBe_I_YbX4wi2KnRNB_xwE-RDh_2f0WZh973Bkdev03dxBge_9YjZEUpK8H_AWhwoIlmYanlVcm4seJlswviKElKptw15356guUE9QZIkMhFano0kyD_E",
+								"description": "admin",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTQxZjMzYzViZjgyZWM1ZmYzNDhiYjFkMmE5ZGRmMWU4ZGNmYmI5Y2RjNTI3NjI4MmFiYmU2ZjgzYzJlZmUxZjEwYzNhNjcwYmNjZjQwNTYiLCJpYXQiOiIxNjExNjYzNDUwLjYxNTQwNyIsIm5iZiI6IjE2MTE2NjM0NTAuNjE1NDIwIiwiZXhwIjoiMTY0MzE5OTQ1MC41OTU2NzYiLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.tDMwmkR9n92zIBpRd_RtU5Y1KKyoxDlR2FdB0EEuSELXTSFT3OoMYwWc25VA4Rs2841Jeku5u-Dsz6qhsF47X2RGe_iksYxhwHURq0djypih5j5krLkdW6nhJdxDGl1x1mvJFh7ci8bWc8OFX4LynI9BUZxqAxf7FPxeyOE0BlFzAIWLZ_n18e13YJ8CqlO_Z3P8YwYznxJT5Yjs_nonFFwP5BvxXjZbFB-tZ41rDZPioop1KN2Aj0AxwNF6iIm5E5SFZA1U6yFSyGsmqfnY-m0MTYPRDMoBfLR8P2iX6Ye-njxQJiiCUFORXK99WxzJMqK5ndbuISQI_9YwEBIAQQd5EcHrqiKsmGcv_xrWYMH4KJw3N20jmZ6NukZzYgcq5hRLtbjXFayyws3XLX42IrRUVTcoZcULDbQC4mh3FNx5OCVH1UvJyOK4AIQ_LleNtWbvBYBYU9h8K3-mMf1nGfE23TnRbtiKydC6ayk63_UpRaKF2-s9h2IYPcIY9oeWvsu8QEWGDem3segGpJJZDCJGls-3np4U78j5-SnbIUsny0Ol4IrYHD6xysqWbEdKHT-NUsj_EbDYD7Ip8tkOyqWf7DSDYCi2bwgtzFs1xdPOiAKbhIi_R9OIJDSWSQREWImfhnx3EhbEdGuDngWCSzK5zyCs49kVp2YaTDfo1ZM",
+								"description": "teacher",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjhmNTJmNzYxYTdmNGQyZjBmNjM4Y2QwMzg5N2U5YWFhNzZjZThlYjFhY2ZmYjk3MjJkZGM3ZTg2NTc0NzViZmQ1MGMxNmVmYzhmYWNmMTQiLCJpYXQiOiIxNjExNjYzNDk5LjMzMzk0MSIsIm5iZiI6IjE2MTE2NjM0OTkuMzMzOTUyIiwiZXhwIjoiMTY0MzE5OTQ5OS4zMTg5ODAiLCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.uJKCYm8DK5u8EhpD0f0-zfSrQRh48F5AhTgSDin4d0J7KxhojeNRqTwpZvUx5awoiJy5TLW614M4SEtjalwzt-QLGxNqzvgTbVsaiilpbErI5NorYjXaeHmAfx6AvKLiRNFfpJTmQrde7K2VxzN6RstlGrBCcSCHrSabzb24LEamNXkhHuAwIjTKxLVHocQmokoJpDC4oQ5sEpTyqY7g_TpWBoqCTK7vvFBgESwjbaNJJ9eLJ9DyaRmzCDf0o4yNGh9VBJhwO4swDPgFmxqfBZfns7n2rPaF_2aHuRCqbZrT1X-caHwmO6r62zm9KT-7m4kSCqvi1KLsxapcueZEzanRse4NHa4e2pbWQVR1b4GbdUeC8MGxth_Q5O8tJQ77BSSja5Tm5sadvOuEIsBs6YIXqLWoaXhGJSLSPvfSoY_aHB4v_oe6y_54nO5Lve4HXRfZHkas17k1lRmMnLvlxD4W307sadAvdzHIxrCtcMsXu7AIx_UOSaGjdkxjEEu2vSlL5D7dT8OV6b6ElKgHzT8lL6fbyvAHWt9ca_6mvgGv13cJ143W2KesPzUMXHO9R163UGLLW34KZmdqVz788YAM7SuI-QIq0rgrwelBQbJdES-izhazKSnuPRmO-cYhb--9cdfPPmi9adnumJ2gLcO4Rkn9NumLNR5j3JlGMk8",
+								"description": "parent",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"name\" : \"seif\",\r\n\"age\" : \"15\",\r\n\"sex\" : \"male\",\r\n\"classroom_id\" : \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/Parent/3/School/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"Parent",
+								"3",
+								"School",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8000/api/Teacher/2/Class/1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjk3ZjM1YTU0ZTljZmEwYWIyNjRjMzQ2ZTcwNTY5ODNlYWNjMWE5MDVlNWU4M2Q0YzBkYjEyMzRmMDY4ZWJjMjY2ZDJjZDRlMWVkOTBjMzMiLCJpYXQiOiIxNjExNjYzMzc3LjE0ODc1NiIsIm5iZiI6IjE2MTE2NjMzNzcuMTQ4NzYxIiwiZXhwIjoiMTY0MzE5OTM3Ny4xMjQ0ODMiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Q_iEJAFr_AMHR3LMtToNETfCXeKkxiYniwHZ-8RoZHWivgITrTlDCeMeiw2UMNlgK2y73BHWE0yDncqbdBl2QrXSCa82Q9R-eztbfgfVJJKtmi_Rq7PWRrSBcOY5kyDbfg0JUHWHiV69R6uWqatwlneqV9RH00lEu8D6Ie-zGS2JADMfdwykytJxrhwahIxK4bg8rQqn1865c4rhfu8pjqCaM-8-1MxOM6za-0-ZbUSCFKQmssjDqBu87G_nkmA05WNkyaQbm7YPd87x6D8myJg2DqOnmXhWkXYxCvrcvxIhKwWJxHW4AU276WEZH_Vgb4XV_do4Yv-KdaIw8lJmdpYoZ_5SZ2c4r4oCpttTG6zeNZd2uEIQL9K3VarLTtS0u3R0iIp3SbrEWvuoXD5NSePoOBT2tFVULjVRl1_8JzCMH1xL7dQw9L7Cojh4Kdv37cGklbUYSjvZSIZ447ve4Xg2sjrQnt8cc9XFroMXtuQpJUOAdYFeeB7DtwFOH9q1DvWOejyzTpKSZoz2DNOCN5Sk5t6y1cOaOr3RjmUzSMKnRVFzsLkzT7wBe_I_YbX4wi2KnRNB_xwE-RDh_2f0WZh973Bkdev03dxBge_9YjZEUpK8H_AWhwoIlmYanlVcm4seJlswviKElKptw15356guUE9QZIkMhFano0kyD_E",
+								"description": "admin",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTQxZjMzYzViZjgyZWM1ZmYzNDhiYjFkMmE5ZGRmMWU4ZGNmYmI5Y2RjNTI3NjI4MmFiYmU2ZjgzYzJlZmUxZjEwYzNhNjcwYmNjZjQwNTYiLCJpYXQiOiIxNjExNjYzNDUwLjYxNTQwNyIsIm5iZiI6IjE2MTE2NjM0NTAuNjE1NDIwIiwiZXhwIjoiMTY0MzE5OTQ1MC41OTU2NzYiLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.tDMwmkR9n92zIBpRd_RtU5Y1KKyoxDlR2FdB0EEuSELXTSFT3OoMYwWc25VA4Rs2841Jeku5u-Dsz6qhsF47X2RGe_iksYxhwHURq0djypih5j5krLkdW6nhJdxDGl1x1mvJFh7ci8bWc8OFX4LynI9BUZxqAxf7FPxeyOE0BlFzAIWLZ_n18e13YJ8CqlO_Z3P8YwYznxJT5Yjs_nonFFwP5BvxXjZbFB-tZ41rDZPioop1KN2Aj0AxwNF6iIm5E5SFZA1U6yFSyGsmqfnY-m0MTYPRDMoBfLR8P2iX6Ye-njxQJiiCUFORXK99WxzJMqK5ndbuISQI_9YwEBIAQQd5EcHrqiKsmGcv_xrWYMH4KJw3N20jmZ6NukZzYgcq5hRLtbjXFayyws3XLX42IrRUVTcoZcULDbQC4mh3FNx5OCVH1UvJyOK4AIQ_LleNtWbvBYBYU9h8K3-mMf1nGfE23TnRbtiKydC6ayk63_UpRaKF2-s9h2IYPcIY9oeWvsu8QEWGDem3segGpJJZDCJGls-3np4U78j5-SnbIUsny0Ol4IrYHD6xysqWbEdKHT-NUsj_EbDYD7Ip8tkOyqWf7DSDYCi2bwgtzFs1xdPOiAKbhIi_R9OIJDSWSQREWImfhnx3EhbEdGuDngWCSzK5zyCs49kVp2YaTDfo1ZM",
+								"description": "teacher",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjhmNTJmNzYxYTdmNGQyZjBmNjM4Y2QwMzg5N2U5YWFhNzZjZThlYjFhY2ZmYjk3MjJkZGM3ZTg2NTc0NzViZmQ1MGMxNmVmYzhmYWNmMTQiLCJpYXQiOiIxNjExNjYzNDk5LjMzMzk0MSIsIm5iZiI6IjE2MTE2NjM0OTkuMzMzOTUyIiwiZXhwIjoiMTY0MzE5OTQ5OS4zMTg5ODAiLCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.uJKCYm8DK5u8EhpD0f0-zfSrQRh48F5AhTgSDin4d0J7KxhojeNRqTwpZvUx5awoiJy5TLW614M4SEtjalwzt-QLGxNqzvgTbVsaiilpbErI5NorYjXaeHmAfx6AvKLiRNFfpJTmQrde7K2VxzN6RstlGrBCcSCHrSabzb24LEamNXkhHuAwIjTKxLVHocQmokoJpDC4oQ5sEpTyqY7g_TpWBoqCTK7vvFBgESwjbaNJJ9eLJ9DyaRmzCDf0o4yNGh9VBJhwO4swDPgFmxqfBZfns7n2rPaF_2aHuRCqbZrT1X-caHwmO6r62zm9KT-7m4kSCqvi1KLsxapcueZEzanRse4NHa4e2pbWQVR1b4GbdUeC8MGxth_Q5O8tJQ77BSSja5Tm5sadvOuEIsBs6YIXqLWoaXhGJSLSPvfSoY_aHB4v_oe6y_54nO5Lve4HXRfZHkas17k1lRmMnLvlxD4W307sadAvdzHIxrCtcMsXu7AIx_UOSaGjdkxjEEu2vSlL5D7dT8OV6b6ElKgHzT8lL6fbyvAHWt9ca_6mvgGv13cJ143W2KesPzUMXHO9R163UGLLW34KZmdqVz788YAM7SuI-QIq0rgrwelBQbJdES-izhazKSnuPRmO-cYhb--9cdfPPmi9adnumJ2gLcO4Rkn9NumLNR5j3JlGMk8",
+								"description": "parent",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"name\" : \"seif\",\r\n\"age\" : \"15\",\r\n\"sex\" : \"male\",\r\n\"classroom_id\" : \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/Teacher/2/Class/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"Teacher",
+								"2",
+								"Class",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Teacher",
+			"item": [
+				{
+					"name": "localhost:8000/api/Teacher/Class/1/Students",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjk3ZjM1YTU0ZTljZmEwYWIyNjRjMzQ2ZTcwNTY5ODNlYWNjMWE5MDVlNWU4M2Q0YzBkYjEyMzRmMDY4ZWJjMjY2ZDJjZDRlMWVkOTBjMzMiLCJpYXQiOiIxNjExNjYzMzc3LjE0ODc1NiIsIm5iZiI6IjE2MTE2NjMzNzcuMTQ4NzYxIiwiZXhwIjoiMTY0MzE5OTM3Ny4xMjQ0ODMiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Q_iEJAFr_AMHR3LMtToNETfCXeKkxiYniwHZ-8RoZHWivgITrTlDCeMeiw2UMNlgK2y73BHWE0yDncqbdBl2QrXSCa82Q9R-eztbfgfVJJKtmi_Rq7PWRrSBcOY5kyDbfg0JUHWHiV69R6uWqatwlneqV9RH00lEu8D6Ie-zGS2JADMfdwykytJxrhwahIxK4bg8rQqn1865c4rhfu8pjqCaM-8-1MxOM6za-0-ZbUSCFKQmssjDqBu87G_nkmA05WNkyaQbm7YPd87x6D8myJg2DqOnmXhWkXYxCvrcvxIhKwWJxHW4AU276WEZH_Vgb4XV_do4Yv-KdaIw8lJmdpYoZ_5SZ2c4r4oCpttTG6zeNZd2uEIQL9K3VarLTtS0u3R0iIp3SbrEWvuoXD5NSePoOBT2tFVULjVRl1_8JzCMH1xL7dQw9L7Cojh4Kdv37cGklbUYSjvZSIZ447ve4Xg2sjrQnt8cc9XFroMXtuQpJUOAdYFeeB7DtwFOH9q1DvWOejyzTpKSZoz2DNOCN5Sk5t6y1cOaOr3RjmUzSMKnRVFzsLkzT7wBe_I_YbX4wi2KnRNB_xwE-RDh_2f0WZh973Bkdev03dxBge_9YjZEUpK8H_AWhwoIlmYanlVcm4seJlswviKElKptw15356guUE9QZIkMhFano0kyD_E",
+								"description": "admin",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTQxZjMzYzViZjgyZWM1ZmYzNDhiYjFkMmE5ZGRmMWU4ZGNmYmI5Y2RjNTI3NjI4MmFiYmU2ZjgzYzJlZmUxZjEwYzNhNjcwYmNjZjQwNTYiLCJpYXQiOiIxNjExNjYzNDUwLjYxNTQwNyIsIm5iZiI6IjE2MTE2NjM0NTAuNjE1NDIwIiwiZXhwIjoiMTY0MzE5OTQ1MC41OTU2NzYiLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.tDMwmkR9n92zIBpRd_RtU5Y1KKyoxDlR2FdB0EEuSELXTSFT3OoMYwWc25VA4Rs2841Jeku5u-Dsz6qhsF47X2RGe_iksYxhwHURq0djypih5j5krLkdW6nhJdxDGl1x1mvJFh7ci8bWc8OFX4LynI9BUZxqAxf7FPxeyOE0BlFzAIWLZ_n18e13YJ8CqlO_Z3P8YwYznxJT5Yjs_nonFFwP5BvxXjZbFB-tZ41rDZPioop1KN2Aj0AxwNF6iIm5E5SFZA1U6yFSyGsmqfnY-m0MTYPRDMoBfLR8P2iX6Ye-njxQJiiCUFORXK99WxzJMqK5ndbuISQI_9YwEBIAQQd5EcHrqiKsmGcv_xrWYMH4KJw3N20jmZ6NukZzYgcq5hRLtbjXFayyws3XLX42IrRUVTcoZcULDbQC4mh3FNx5OCVH1UvJyOK4AIQ_LleNtWbvBYBYU9h8K3-mMf1nGfE23TnRbtiKydC6ayk63_UpRaKF2-s9h2IYPcIY9oeWvsu8QEWGDem3segGpJJZDCJGls-3np4U78j5-SnbIUsny0Ol4IrYHD6xysqWbEdKHT-NUsj_EbDYD7Ip8tkOyqWf7DSDYCi2bwgtzFs1xdPOiAKbhIi_R9OIJDSWSQREWImfhnx3EhbEdGuDngWCSzK5zyCs49kVp2YaTDfo1ZM",
+								"description": "teacher",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjhmNTJmNzYxYTdmNGQyZjBmNjM4Y2QwMzg5N2U5YWFhNzZjZThlYjFhY2ZmYjk3MjJkZGM3ZTg2NTc0NzViZmQ1MGMxNmVmYzhmYWNmMTQiLCJpYXQiOiIxNjExNjYzNDk5LjMzMzk0MSIsIm5iZiI6IjE2MTE2NjM0OTkuMzMzOTUyIiwiZXhwIjoiMTY0MzE5OTQ5OS4zMTg5ODAiLCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.uJKCYm8DK5u8EhpD0f0-zfSrQRh48F5AhTgSDin4d0J7KxhojeNRqTwpZvUx5awoiJy5TLW614M4SEtjalwzt-QLGxNqzvgTbVsaiilpbErI5NorYjXaeHmAfx6AvKLiRNFfpJTmQrde7K2VxzN6RstlGrBCcSCHrSabzb24LEamNXkhHuAwIjTKxLVHocQmokoJpDC4oQ5sEpTyqY7g_TpWBoqCTK7vvFBgESwjbaNJJ9eLJ9DyaRmzCDf0o4yNGh9VBJhwO4swDPgFmxqfBZfns7n2rPaF_2aHuRCqbZrT1X-caHwmO6r62zm9KT-7m4kSCqvi1KLsxapcueZEzanRse4NHa4e2pbWQVR1b4GbdUeC8MGxth_Q5O8tJQ77BSSja5Tm5sadvOuEIsBs6YIXqLWoaXhGJSLSPvfSoY_aHB4v_oe6y_54nO5Lve4HXRfZHkas17k1lRmMnLvlxD4W307sadAvdzHIxrCtcMsXu7AIx_UOSaGjdkxjEEu2vSlL5D7dT8OV6b6ElKgHzT8lL6fbyvAHWt9ca_6mvgGv13cJ143W2KesPzUMXHO9R163UGLLW34KZmdqVz788YAM7SuI-QIq0rgrwelBQbJdES-izhazKSnuPRmO-cYhb--9cdfPPmi9adnumJ2gLcO4Rkn9NumLNR5j3JlGMk8",
+								"description": "parent",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"name\" : \"seif\",\r\n\"age\" : \"15\",\r\n\"sex\" : \"male\",\r\n\"classroom_id\" : \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/Teacher/Class/1/Students",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"Teacher",
+								"Class",
+								"1",
+								"Students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8000/api/Attendance/Class/1/Student/1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjk3ZjM1YTU0ZTljZmEwYWIyNjRjMzQ2ZTcwNTY5ODNlYWNjMWE5MDVlNWU4M2Q0YzBkYjEyMzRmMDY4ZWJjMjY2ZDJjZDRlMWVkOTBjMzMiLCJpYXQiOiIxNjExNjYzMzc3LjE0ODc1NiIsIm5iZiI6IjE2MTE2NjMzNzcuMTQ4NzYxIiwiZXhwIjoiMTY0MzE5OTM3Ny4xMjQ0ODMiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Q_iEJAFr_AMHR3LMtToNETfCXeKkxiYniwHZ-8RoZHWivgITrTlDCeMeiw2UMNlgK2y73BHWE0yDncqbdBl2QrXSCa82Q9R-eztbfgfVJJKtmi_Rq7PWRrSBcOY5kyDbfg0JUHWHiV69R6uWqatwlneqV9RH00lEu8D6Ie-zGS2JADMfdwykytJxrhwahIxK4bg8rQqn1865c4rhfu8pjqCaM-8-1MxOM6za-0-ZbUSCFKQmssjDqBu87G_nkmA05WNkyaQbm7YPd87x6D8myJg2DqOnmXhWkXYxCvrcvxIhKwWJxHW4AU276WEZH_Vgb4XV_do4Yv-KdaIw8lJmdpYoZ_5SZ2c4r4oCpttTG6zeNZd2uEIQL9K3VarLTtS0u3R0iIp3SbrEWvuoXD5NSePoOBT2tFVULjVRl1_8JzCMH1xL7dQw9L7Cojh4Kdv37cGklbUYSjvZSIZ447ve4Xg2sjrQnt8cc9XFroMXtuQpJUOAdYFeeB7DtwFOH9q1DvWOejyzTpKSZoz2DNOCN5Sk5t6y1cOaOr3RjmUzSMKnRVFzsLkzT7wBe_I_YbX4wi2KnRNB_xwE-RDh_2f0WZh973Bkdev03dxBge_9YjZEUpK8H_AWhwoIlmYanlVcm4seJlswviKElKptw15356guUE9QZIkMhFano0kyD_E",
+								"description": "admin",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTQxZjMzYzViZjgyZWM1ZmYzNDhiYjFkMmE5ZGRmMWU4ZGNmYmI5Y2RjNTI3NjI4MmFiYmU2ZjgzYzJlZmUxZjEwYzNhNjcwYmNjZjQwNTYiLCJpYXQiOiIxNjExNjYzNDUwLjYxNTQwNyIsIm5iZiI6IjE2MTE2NjM0NTAuNjE1NDIwIiwiZXhwIjoiMTY0MzE5OTQ1MC41OTU2NzYiLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.tDMwmkR9n92zIBpRd_RtU5Y1KKyoxDlR2FdB0EEuSELXTSFT3OoMYwWc25VA4Rs2841Jeku5u-Dsz6qhsF47X2RGe_iksYxhwHURq0djypih5j5krLkdW6nhJdxDGl1x1mvJFh7ci8bWc8OFX4LynI9BUZxqAxf7FPxeyOE0BlFzAIWLZ_n18e13YJ8CqlO_Z3P8YwYznxJT5Yjs_nonFFwP5BvxXjZbFB-tZ41rDZPioop1KN2Aj0AxwNF6iIm5E5SFZA1U6yFSyGsmqfnY-m0MTYPRDMoBfLR8P2iX6Ye-njxQJiiCUFORXK99WxzJMqK5ndbuISQI_9YwEBIAQQd5EcHrqiKsmGcv_xrWYMH4KJw3N20jmZ6NukZzYgcq5hRLtbjXFayyws3XLX42IrRUVTcoZcULDbQC4mh3FNx5OCVH1UvJyOK4AIQ_LleNtWbvBYBYU9h8K3-mMf1nGfE23TnRbtiKydC6ayk63_UpRaKF2-s9h2IYPcIY9oeWvsu8QEWGDem3segGpJJZDCJGls-3np4U78j5-SnbIUsny0Ol4IrYHD6xysqWbEdKHT-NUsj_EbDYD7Ip8tkOyqWf7DSDYCi2bwgtzFs1xdPOiAKbhIi_R9OIJDSWSQREWImfhnx3EhbEdGuDngWCSzK5zyCs49kVp2YaTDfo1ZM",
+								"description": "teacher",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjhmNTJmNzYxYTdmNGQyZjBmNjM4Y2QwMzg5N2U5YWFhNzZjZThlYjFhY2ZmYjk3MjJkZGM3ZTg2NTc0NzViZmQ1MGMxNmVmYzhmYWNmMTQiLCJpYXQiOiIxNjExNjYzNDk5LjMzMzk0MSIsIm5iZiI6IjE2MTE2NjM0OTkuMzMzOTUyIiwiZXhwIjoiMTY0MzE5OTQ5OS4zMTg5ODAiLCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.uJKCYm8DK5u8EhpD0f0-zfSrQRh48F5AhTgSDin4d0J7KxhojeNRqTwpZvUx5awoiJy5TLW614M4SEtjalwzt-QLGxNqzvgTbVsaiilpbErI5NorYjXaeHmAfx6AvKLiRNFfpJTmQrde7K2VxzN6RstlGrBCcSCHrSabzb24LEamNXkhHuAwIjTKxLVHocQmokoJpDC4oQ5sEpTyqY7g_TpWBoqCTK7vvFBgESwjbaNJJ9eLJ9DyaRmzCDf0o4yNGh9VBJhwO4swDPgFmxqfBZfns7n2rPaF_2aHuRCqbZrT1X-caHwmO6r62zm9KT-7m4kSCqvi1KLsxapcueZEzanRse4NHa4e2pbWQVR1b4GbdUeC8MGxth_Q5O8tJQ77BSSja5Tm5sadvOuEIsBs6YIXqLWoaXhGJSLSPvfSoY_aHB4v_oe6y_54nO5Lve4HXRfZHkas17k1lRmMnLvlxD4W307sadAvdzHIxrCtcMsXu7AIx_UOSaGjdkxjEEu2vSlL5D7dT8OV6b6ElKgHzT8lL6fbyvAHWt9ca_6mvgGv13cJ143W2KesPzUMXHO9R163UGLLW34KZmdqVz788YAM7SuI-QIq0rgrwelBQbJdES-izhazKSnuPRmO-cYhb--9cdfPPmi9adnumJ2gLcO4Rkn9NumLNR5j3JlGMk8",
+								"description": "parent",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"Attendance\" : false,\r\n\"date\" : \"26-1-2021\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/Attendance/Class/1/Student/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"Attendance",
+								"Class",
+								"1",
+								"Student",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Parent",
+			"item": [
+				{
+					"name": "localhost:8000/api/Student",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjk3ZjM1YTU0ZTljZmEwYWIyNjRjMzQ2ZTcwNTY5ODNlYWNjMWE5MDVlNWU4M2Q0YzBkYjEyMzRmMDY4ZWJjMjY2ZDJjZDRlMWVkOTBjMzMiLCJpYXQiOiIxNjExNjYzMzc3LjE0ODc1NiIsIm5iZiI6IjE2MTE2NjMzNzcuMTQ4NzYxIiwiZXhwIjoiMTY0MzE5OTM3Ny4xMjQ0ODMiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Q_iEJAFr_AMHR3LMtToNETfCXeKkxiYniwHZ-8RoZHWivgITrTlDCeMeiw2UMNlgK2y73BHWE0yDncqbdBl2QrXSCa82Q9R-eztbfgfVJJKtmi_Rq7PWRrSBcOY5kyDbfg0JUHWHiV69R6uWqatwlneqV9RH00lEu8D6Ie-zGS2JADMfdwykytJxrhwahIxK4bg8rQqn1865c4rhfu8pjqCaM-8-1MxOM6za-0-ZbUSCFKQmssjDqBu87G_nkmA05WNkyaQbm7YPd87x6D8myJg2DqOnmXhWkXYxCvrcvxIhKwWJxHW4AU276WEZH_Vgb4XV_do4Yv-KdaIw8lJmdpYoZ_5SZ2c4r4oCpttTG6zeNZd2uEIQL9K3VarLTtS0u3R0iIp3SbrEWvuoXD5NSePoOBT2tFVULjVRl1_8JzCMH1xL7dQw9L7Cojh4Kdv37cGklbUYSjvZSIZ447ve4Xg2sjrQnt8cc9XFroMXtuQpJUOAdYFeeB7DtwFOH9q1DvWOejyzTpKSZoz2DNOCN5Sk5t6y1cOaOr3RjmUzSMKnRVFzsLkzT7wBe_I_YbX4wi2KnRNB_xwE-RDh_2f0WZh973Bkdev03dxBge_9YjZEUpK8H_AWhwoIlmYanlVcm4seJlswviKElKptw15356guUE9QZIkMhFano0kyD_E",
+								"description": "admin",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTQxZjMzYzViZjgyZWM1ZmYzNDhiYjFkMmE5ZGRmMWU4ZGNmYmI5Y2RjNTI3NjI4MmFiYmU2ZjgzYzJlZmUxZjEwYzNhNjcwYmNjZjQwNTYiLCJpYXQiOiIxNjExNjYzNDUwLjYxNTQwNyIsIm5iZiI6IjE2MTE2NjM0NTAuNjE1NDIwIiwiZXhwIjoiMTY0MzE5OTQ1MC41OTU2NzYiLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.tDMwmkR9n92zIBpRd_RtU5Y1KKyoxDlR2FdB0EEuSELXTSFT3OoMYwWc25VA4Rs2841Jeku5u-Dsz6qhsF47X2RGe_iksYxhwHURq0djypih5j5krLkdW6nhJdxDGl1x1mvJFh7ci8bWc8OFX4LynI9BUZxqAxf7FPxeyOE0BlFzAIWLZ_n18e13YJ8CqlO_Z3P8YwYznxJT5Yjs_nonFFwP5BvxXjZbFB-tZ41rDZPioop1KN2Aj0AxwNF6iIm5E5SFZA1U6yFSyGsmqfnY-m0MTYPRDMoBfLR8P2iX6Ye-njxQJiiCUFORXK99WxzJMqK5ndbuISQI_9YwEBIAQQd5EcHrqiKsmGcv_xrWYMH4KJw3N20jmZ6NukZzYgcq5hRLtbjXFayyws3XLX42IrRUVTcoZcULDbQC4mh3FNx5OCVH1UvJyOK4AIQ_LleNtWbvBYBYU9h8K3-mMf1nGfE23TnRbtiKydC6ayk63_UpRaKF2-s9h2IYPcIY9oeWvsu8QEWGDem3segGpJJZDCJGls-3np4U78j5-SnbIUsny0Ol4IrYHD6xysqWbEdKHT-NUsj_EbDYD7Ip8tkOyqWf7DSDYCi2bwgtzFs1xdPOiAKbhIi_R9OIJDSWSQREWImfhnx3EhbEdGuDngWCSzK5zyCs49kVp2YaTDfo1ZM",
+								"description": "teacher",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjhmNTJmNzYxYTdmNGQyZjBmNjM4Y2QwMzg5N2U5YWFhNzZjZThlYjFhY2ZmYjk3MjJkZGM3ZTg2NTc0NzViZmQ1MGMxNmVmYzhmYWNmMTQiLCJpYXQiOiIxNjExNjYzNDk5LjMzMzk0MSIsIm5iZiI6IjE2MTE2NjM0OTkuMzMzOTUyIiwiZXhwIjoiMTY0MzE5OTQ5OS4zMTg5ODAiLCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.uJKCYm8DK5u8EhpD0f0-zfSrQRh48F5AhTgSDin4d0J7KxhojeNRqTwpZvUx5awoiJy5TLW614M4SEtjalwzt-QLGxNqzvgTbVsaiilpbErI5NorYjXaeHmAfx6AvKLiRNFfpJTmQrde7K2VxzN6RstlGrBCcSCHrSabzb24LEamNXkhHuAwIjTKxLVHocQmokoJpDC4oQ5sEpTyqY7g_TpWBoqCTK7vvFBgESwjbaNJJ9eLJ9DyaRmzCDf0o4yNGh9VBJhwO4swDPgFmxqfBZfns7n2rPaF_2aHuRCqbZrT1X-caHwmO6r62zm9KT-7m4kSCqvi1KLsxapcueZEzanRse4NHa4e2pbWQVR1b4GbdUeC8MGxth_Q5O8tJQ77BSSja5Tm5sadvOuEIsBs6YIXqLWoaXhGJSLSPvfSoY_aHB4v_oe6y_54nO5Lve4HXRfZHkas17k1lRmMnLvlxD4W307sadAvdzHIxrCtcMsXu7AIx_UOSaGjdkxjEEu2vSlL5D7dT8OV6b6ElKgHzT8lL6fbyvAHWt9ca_6mvgGv13cJ143W2KesPzUMXHO9R163UGLLW34KZmdqVz788YAM7SuI-QIq0rgrwelBQbJdES-izhazKSnuPRmO-cYhb--9cdfPPmi9adnumJ2gLcO4Rkn9NumLNR5j3JlGMk8",
+								"description": "parent",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"name\" : \"seif\",\r\n\"age\" : \"15\",\r\n\"sex\" : \"male\",\r\n\"classroom_id\" : \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/Student",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"Student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8000/api/Attendance/Student/1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjk3ZjM1YTU0ZTljZmEwYWIyNjRjMzQ2ZTcwNTY5ODNlYWNjMWE5MDVlNWU4M2Q0YzBkYjEyMzRmMDY4ZWJjMjY2ZDJjZDRlMWVkOTBjMzMiLCJpYXQiOiIxNjExNjYzMzc3LjE0ODc1NiIsIm5iZiI6IjE2MTE2NjMzNzcuMTQ4NzYxIiwiZXhwIjoiMTY0MzE5OTM3Ny4xMjQ0ODMiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Q_iEJAFr_AMHR3LMtToNETfCXeKkxiYniwHZ-8RoZHWivgITrTlDCeMeiw2UMNlgK2y73BHWE0yDncqbdBl2QrXSCa82Q9R-eztbfgfVJJKtmi_Rq7PWRrSBcOY5kyDbfg0JUHWHiV69R6uWqatwlneqV9RH00lEu8D6Ie-zGS2JADMfdwykytJxrhwahIxK4bg8rQqn1865c4rhfu8pjqCaM-8-1MxOM6za-0-ZbUSCFKQmssjDqBu87G_nkmA05WNkyaQbm7YPd87x6D8myJg2DqOnmXhWkXYxCvrcvxIhKwWJxHW4AU276WEZH_Vgb4XV_do4Yv-KdaIw8lJmdpYoZ_5SZ2c4r4oCpttTG6zeNZd2uEIQL9K3VarLTtS0u3R0iIp3SbrEWvuoXD5NSePoOBT2tFVULjVRl1_8JzCMH1xL7dQw9L7Cojh4Kdv37cGklbUYSjvZSIZ447ve4Xg2sjrQnt8cc9XFroMXtuQpJUOAdYFeeB7DtwFOH9q1DvWOejyzTpKSZoz2DNOCN5Sk5t6y1cOaOr3RjmUzSMKnRVFzsLkzT7wBe_I_YbX4wi2KnRNB_xwE-RDh_2f0WZh973Bkdev03dxBge_9YjZEUpK8H_AWhwoIlmYanlVcm4seJlswviKElKptw15356guUE9QZIkMhFano0kyD_E",
+								"description": "admin",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTQxZjMzYzViZjgyZWM1ZmYzNDhiYjFkMmE5ZGRmMWU4ZGNmYmI5Y2RjNTI3NjI4MmFiYmU2ZjgzYzJlZmUxZjEwYzNhNjcwYmNjZjQwNTYiLCJpYXQiOiIxNjExNjYzNDUwLjYxNTQwNyIsIm5iZiI6IjE2MTE2NjM0NTAuNjE1NDIwIiwiZXhwIjoiMTY0MzE5OTQ1MC41OTU2NzYiLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.tDMwmkR9n92zIBpRd_RtU5Y1KKyoxDlR2FdB0EEuSELXTSFT3OoMYwWc25VA4Rs2841Jeku5u-Dsz6qhsF47X2RGe_iksYxhwHURq0djypih5j5krLkdW6nhJdxDGl1x1mvJFh7ci8bWc8OFX4LynI9BUZxqAxf7FPxeyOE0BlFzAIWLZ_n18e13YJ8CqlO_Z3P8YwYznxJT5Yjs_nonFFwP5BvxXjZbFB-tZ41rDZPioop1KN2Aj0AxwNF6iIm5E5SFZA1U6yFSyGsmqfnY-m0MTYPRDMoBfLR8P2iX6Ye-njxQJiiCUFORXK99WxzJMqK5ndbuISQI_9YwEBIAQQd5EcHrqiKsmGcv_xrWYMH4KJw3N20jmZ6NukZzYgcq5hRLtbjXFayyws3XLX42IrRUVTcoZcULDbQC4mh3FNx5OCVH1UvJyOK4AIQ_LleNtWbvBYBYU9h8K3-mMf1nGfE23TnRbtiKydC6ayk63_UpRaKF2-s9h2IYPcIY9oeWvsu8QEWGDem3segGpJJZDCJGls-3np4U78j5-SnbIUsny0Ol4IrYHD6xysqWbEdKHT-NUsj_EbDYD7Ip8tkOyqWf7DSDYCi2bwgtzFs1xdPOiAKbhIi_R9OIJDSWSQREWImfhnx3EhbEdGuDngWCSzK5zyCs49kVp2YaTDfo1ZM",
+								"description": "teacher",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjhmNTJmNzYxYTdmNGQyZjBmNjM4Y2QwMzg5N2U5YWFhNzZjZThlYjFhY2ZmYjk3MjJkZGM3ZTg2NTc0NzViZmQ1MGMxNmVmYzhmYWNmMTQiLCJpYXQiOiIxNjExNjYzNDk5LjMzMzk0MSIsIm5iZiI6IjE2MTE2NjM0OTkuMzMzOTUyIiwiZXhwIjoiMTY0MzE5OTQ5OS4zMTg5ODAiLCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.uJKCYm8DK5u8EhpD0f0-zfSrQRh48F5AhTgSDin4d0J7KxhojeNRqTwpZvUx5awoiJy5TLW614M4SEtjalwzt-QLGxNqzvgTbVsaiilpbErI5NorYjXaeHmAfx6AvKLiRNFfpJTmQrde7K2VxzN6RstlGrBCcSCHrSabzb24LEamNXkhHuAwIjTKxLVHocQmokoJpDC4oQ5sEpTyqY7g_TpWBoqCTK7vvFBgESwjbaNJJ9eLJ9DyaRmzCDf0o4yNGh9VBJhwO4swDPgFmxqfBZfns7n2rPaF_2aHuRCqbZrT1X-caHwmO6r62zm9KT-7m4kSCqvi1KLsxapcueZEzanRse4NHa4e2pbWQVR1b4GbdUeC8MGxth_Q5O8tJQ77BSSja5Tm5sadvOuEIsBs6YIXqLWoaXhGJSLSPvfSoY_aHB4v_oe6y_54nO5Lve4HXRfZHkas17k1lRmMnLvlxD4W307sadAvdzHIxrCtcMsXu7AIx_UOSaGjdkxjEEu2vSlL5D7dT8OV6b6ElKgHzT8lL6fbyvAHWt9ca_6mvgGv13cJ143W2KesPzUMXHO9R163UGLLW34KZmdqVz788YAM7SuI-QIq0rgrwelBQbJdES-izhazKSnuPRmO-cYhb--9cdfPPmi9adnumJ2gLcO4Rkn9NumLNR5j3JlGMk8",
+								"description": "parent",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"Attendance\" : false,\r\n\"date\" : \"26-1-2021\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/Attendance/Student/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"Attendance",
+								"Student",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8000/api/Parent/GetStudents",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjk3ZjM1YTU0ZTljZmEwYWIyNjRjMzQ2ZTcwNTY5ODNlYWNjMWE5MDVlNWU4M2Q0YzBkYjEyMzRmMDY4ZWJjMjY2ZDJjZDRlMWVkOTBjMzMiLCJpYXQiOiIxNjExNjYzMzc3LjE0ODc1NiIsIm5iZiI6IjE2MTE2NjMzNzcuMTQ4NzYxIiwiZXhwIjoiMTY0MzE5OTM3Ny4xMjQ0ODMiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Q_iEJAFr_AMHR3LMtToNETfCXeKkxiYniwHZ-8RoZHWivgITrTlDCeMeiw2UMNlgK2y73BHWE0yDncqbdBl2QrXSCa82Q9R-eztbfgfVJJKtmi_Rq7PWRrSBcOY5kyDbfg0JUHWHiV69R6uWqatwlneqV9RH00lEu8D6Ie-zGS2JADMfdwykytJxrhwahIxK4bg8rQqn1865c4rhfu8pjqCaM-8-1MxOM6za-0-ZbUSCFKQmssjDqBu87G_nkmA05WNkyaQbm7YPd87x6D8myJg2DqOnmXhWkXYxCvrcvxIhKwWJxHW4AU276WEZH_Vgb4XV_do4Yv-KdaIw8lJmdpYoZ_5SZ2c4r4oCpttTG6zeNZd2uEIQL9K3VarLTtS0u3R0iIp3SbrEWvuoXD5NSePoOBT2tFVULjVRl1_8JzCMH1xL7dQw9L7Cojh4Kdv37cGklbUYSjvZSIZ447ve4Xg2sjrQnt8cc9XFroMXtuQpJUOAdYFeeB7DtwFOH9q1DvWOejyzTpKSZoz2DNOCN5Sk5t6y1cOaOr3RjmUzSMKnRVFzsLkzT7wBe_I_YbX4wi2KnRNB_xwE-RDh_2f0WZh973Bkdev03dxBge_9YjZEUpK8H_AWhwoIlmYanlVcm4seJlswviKElKptw15356guUE9QZIkMhFano0kyD_E",
+								"description": "admin",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTQxZjMzYzViZjgyZWM1ZmYzNDhiYjFkMmE5ZGRmMWU4ZGNmYmI5Y2RjNTI3NjI4MmFiYmU2ZjgzYzJlZmUxZjEwYzNhNjcwYmNjZjQwNTYiLCJpYXQiOiIxNjExNjYzNDUwLjYxNTQwNyIsIm5iZiI6IjE2MTE2NjM0NTAuNjE1NDIwIiwiZXhwIjoiMTY0MzE5OTQ1MC41OTU2NzYiLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.tDMwmkR9n92zIBpRd_RtU5Y1KKyoxDlR2FdB0EEuSELXTSFT3OoMYwWc25VA4Rs2841Jeku5u-Dsz6qhsF47X2RGe_iksYxhwHURq0djypih5j5krLkdW6nhJdxDGl1x1mvJFh7ci8bWc8OFX4LynI9BUZxqAxf7FPxeyOE0BlFzAIWLZ_n18e13YJ8CqlO_Z3P8YwYznxJT5Yjs_nonFFwP5BvxXjZbFB-tZ41rDZPioop1KN2Aj0AxwNF6iIm5E5SFZA1U6yFSyGsmqfnY-m0MTYPRDMoBfLR8P2iX6Ye-njxQJiiCUFORXK99WxzJMqK5ndbuISQI_9YwEBIAQQd5EcHrqiKsmGcv_xrWYMH4KJw3N20jmZ6NukZzYgcq5hRLtbjXFayyws3XLX42IrRUVTcoZcULDbQC4mh3FNx5OCVH1UvJyOK4AIQ_LleNtWbvBYBYU9h8K3-mMf1nGfE23TnRbtiKydC6ayk63_UpRaKF2-s9h2IYPcIY9oeWvsu8QEWGDem3segGpJJZDCJGls-3np4U78j5-SnbIUsny0Ol4IrYHD6xysqWbEdKHT-NUsj_EbDYD7Ip8tkOyqWf7DSDYCi2bwgtzFs1xdPOiAKbhIi_R9OIJDSWSQREWImfhnx3EhbEdGuDngWCSzK5zyCs49kVp2YaTDfo1ZM",
+								"description": "teacher",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjhmNTJmNzYxYTdmNGQyZjBmNjM4Y2QwMzg5N2U5YWFhNzZjZThlYjFhY2ZmYjk3MjJkZGM3ZTg2NTc0NzViZmQ1MGMxNmVmYzhmYWNmMTQiLCJpYXQiOiIxNjExNjYzNDk5LjMzMzk0MSIsIm5iZiI6IjE2MTE2NjM0OTkuMzMzOTUyIiwiZXhwIjoiMTY0MzE5OTQ5OS4zMTg5ODAiLCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.uJKCYm8DK5u8EhpD0f0-zfSrQRh48F5AhTgSDin4d0J7KxhojeNRqTwpZvUx5awoiJy5TLW614M4SEtjalwzt-QLGxNqzvgTbVsaiilpbErI5NorYjXaeHmAfx6AvKLiRNFfpJTmQrde7K2VxzN6RstlGrBCcSCHrSabzb24LEamNXkhHuAwIjTKxLVHocQmokoJpDC4oQ5sEpTyqY7g_TpWBoqCTK7vvFBgESwjbaNJJ9eLJ9DyaRmzCDf0o4yNGh9VBJhwO4swDPgFmxqfBZfns7n2rPaF_2aHuRCqbZrT1X-caHwmO6r62zm9KT-7m4kSCqvi1KLsxapcueZEzanRse4NHa4e2pbWQVR1b4GbdUeC8MGxth_Q5O8tJQ77BSSja5Tm5sadvOuEIsBs6YIXqLWoaXhGJSLSPvfSoY_aHB4v_oe6y_54nO5Lve4HXRfZHkas17k1lRmMnLvlxD4W307sadAvdzHIxrCtcMsXu7AIx_UOSaGjdkxjEEu2vSlL5D7dT8OV6b6ElKgHzT8lL6fbyvAHWt9ca_6mvgGv13cJ143W2KesPzUMXHO9R163UGLLW34KZmdqVz788YAM7SuI-QIq0rgrwelBQbJdES-izhazKSnuPRmO-cYhb--9cdfPPmi9adnumJ2gLcO4Rkn9NumLNR5j3JlGMk8",
+								"description": "parent",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"Attendance\" : false,\r\n\"date\" : \"26-1-2021\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/Parent/GetStudents",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"Parent",
+								"GetStudents"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
