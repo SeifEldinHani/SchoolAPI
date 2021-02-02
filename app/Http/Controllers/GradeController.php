@@ -9,16 +9,26 @@ class GradeController extends Controller
 {
     public function index()
     {
-        $grade = auth()->user()->grades;
-        return response()->json($grade , 200); 
-
+        $grade = Grade::get();
+        if (auth()->user()->can("view" , Grade::class))
+            if (count($grade) != 0)
+                return response()->json($grade , 200); 
+            else 
+                return response()->json([
+                    "message" => "No grades found"
+                ], 404);  
+        else 
+            return response()->json([
+                "Message" => "Not Authorized"
+            ],403);     
     }
     public function read($grade_id)
     {
-        if (Grade::where("id" , $grade_id)->exists())
+        $grade = Grade::find($grade_id); 
+        if (isset($grade))
         {
             if (auth()->user()->can("view" , Grade::class))
-                return response()->json(auth()->user()->grades()->find($grade_id) , 200);
+                return response()->json($grade , 200);
             else 
                 return response()->json([
                     "Message" => "Not Authorized"
@@ -54,7 +64,7 @@ class GradeController extends Controller
     }
     public function delete($grade_id)
     {
-        if (Grade::where('id' , $grade_id))
+        if (Grade::where('id' , $grade_id)->exists())
         {
             if (auth()->user()->can("delete" , Grade::class))
             {
@@ -77,11 +87,12 @@ class GradeController extends Controller
     }
     public function edit($grade_id)
     {
-        if (Grade::where("id" , $grade_id)->exists())
+        $grade = Grade::find($grade_id); 
+        if (isset($grade))
         {
             if (auth()->user()->can("update" , Grade::class))
 
-                Grade::find($grade_id)->update(request()->validate(
+            $grade ->update(request()->validate(
                 [
                     'gradename' => 'required',
                     'School_id' => ['required', 'exists:schools,id']

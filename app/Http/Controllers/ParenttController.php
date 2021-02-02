@@ -12,11 +12,14 @@ class ParenttController extends Controller
 {
     public function setSchool($Parent_id , $school_id)
     { 
-        if (School::where("id" , $school_id)->exists() && (User::where('id' , $Parent_id)->exists() && User::find($Parent_id)->role == "parent"))
+        $School = School::find($school_id); 
+        $User = User::find($Parent_id); 
+        
+        if ((isset($School) && isset($User)) && $User->role == "parent")
         {
-        if(auth()->user()->can("SetSchool", Parentt::class) && !User::find($Parent_id)->schools->contains(School::find($school_id)))
+        if(auth()->user()->can("SetSchool", Parentt::class) && !$User->schools->contains($School))
         {
-            User::find($Parent_id)->schools()->attach($school_id);  
+            $User->schools()->attach($school_id);  
             return response()->json([
                 "Message" => "School set"
             ] , 201); 
@@ -41,15 +44,12 @@ class ParenttController extends Controller
         return response()->json([
             "Message" => "Not Authorized"
         ],403); 
-
-        
     }
     public function getStudentAttendance($student_id)
     {
-        if (Student::where('id' , $student_id)->exists())
+        $student = Student::find($student_id);
+        if (isset($student))
         {
-            $student = Student::find($student_id);
-
         if (auth()->user()->can('view' ,$student , Parentt::class))
         {
             return response()->json($student->attendance, 200); 

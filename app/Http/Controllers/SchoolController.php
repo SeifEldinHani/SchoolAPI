@@ -10,23 +10,26 @@ class SchoolController extends Controller
     public function index()
     {
         $Schools = School::get(); 
-        return response()->json($Schools, 200);
+        if (count($Schools) != 0)
+            return response()->json($Schools, 200);
+        else
+        return response()->json([
+            "message" => "No Schools found"
+          ], 404);
     }
     public function read($School_id)
     {
-        if (School::where("id" , $School_id)->exists())
-        {
-            $School = School::find($School_id); 
-            return response()->json($School , 200);
-        }
+        $School = School::find($School_id); 
+
+        if (isset($School))
+            return response()->json($School , 200); 
         else 
-        return response()->json([
-            "message" => "Not found"
-          ], 404);
+            return response()->json([
+                "message" => "Not found"
+              ], 404);
     }
     public function create()
     {
-
     if (auth()->user()->can("create" , School::class))
     {    
         School::create(request()->validate(
@@ -46,11 +49,12 @@ class SchoolController extends Controller
     }
     public function delete($School_id)
     {
-        if (School::where("id" , $School_id)->exists())
+        $School = School::find($School_id); 
+        if (isset($School))
         {
-            if (auth()->user()->can("delete" , School::find($School_id)))
+            if (auth()->user()->can("delete" ,$School))
             {
-            auth()->user()->schools()->find($School_id)->delete();
+            $School->delete(); 
             return response()->json([
                 "message" => "Deleted"
               ], 202);
@@ -68,9 +72,12 @@ class SchoolController extends Controller
     }
     public function edit($School_id)
     {
-        if(School::where('id' , $School_id)->exists() && auth()->user()->can('update' , School::find($School_id)))
+        $School = School::find($School_id); 
+        if(isset($School))
         {
-            School::find($School_id)->update(request()->validate(
+            if(auth()->user()->can('update' , School::find($School_id)))
+            {
+            $School->update(request()->validate(
                 [
                     'School Name' => 'required',
                     'Location' => 'required',
@@ -80,7 +87,11 @@ class SchoolController extends Controller
                 return response()->json([
                     "message" => "Updated"
                   ], 200);    
-
+            }
+            else 
+            return response()->json([
+            "Message" => "Not Authorized"
+            ],403);  
         }
         else
         return response()->json([

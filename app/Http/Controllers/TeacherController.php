@@ -14,7 +14,14 @@ class TeacherController extends Controller
     public function index()
     {
         if (auth()->user()->can("viewAny" , Teacher::class))
-            return response()->json(User::where("role" , "teacher")->get(), 200); 
+        {
+            $teachers = User::where("role" , "teacher")->get(); 
+            if (count($teachers) != 0)
+                return response()->json($teachers , 200); 
+            else 
+                return response()->json(["message" => "No teachers found"] , 404);
+        }
+
         else 
             return response()->json([
                 "Message" => "Not Authorized"
@@ -23,10 +30,11 @@ class TeacherController extends Controller
     public function read($teacher_id)
     {
 
-        if (User::where('id' , $teacher_id)->exists() &&  User::find($teacher_id)->role == "teacher")
+        $user = User::find($teacher_id);
+        if (isset($user) && $user->role == "teacher")
 
             if (auth()->user()->can("viewAny" , Teacher::class))
-                return response()->json(User::find($teacher_id), 200); 
+                return response()->json($user, 200); 
             else 
                 return response()->json([
                     "Message" => "Not Authorized"
@@ -40,12 +48,14 @@ class TeacherController extends Controller
     }
     public function setClassroom($Teacher_id , $classroom_id)
     {
-        if (classroom::where("id" , $classroom_id)->exists() && (User::where('id' , $Teacher_id)->exists() && User::find($Teacher_id)->role == "teacher"))
+        $classroom = classroom::find($classroom_id); 
+        $Teacher = User::find($Teacher_id);
+        if (isset($classroom) && isset($Teacher) && $Teacher->role == "teacher")
         {
-        if(auth()->user()->can("setClassroom", Teacher::class) && !User::find($Teacher_id)->classrooms->contains(classroom::find($classroom_id)))
+        if(auth()->user()->can("setClassroom", Teacher::class) && !$Teacher->classrooms->contains($classroom))
         {
-            User::find($Teacher_id)->classrooms()->attach($classroom_id);  
-            User::find($Teacher_id)->schools()->attach(classroom::find($classroom_id)->School_id);
+            $Teacher->classrooms()->attach($classroom_id);  
+            $Teacher->schools()->attach($classroom->School_id);
             return response()->json([
                 "Message" => "Classroom set"
             ] , 201); 
@@ -64,10 +74,11 @@ class TeacherController extends Controller
     }
     public function getStudents($class_id)
     {
-        if(classroom::where('id' , $class_id)->exists())
+        $classroom = classroom::find($class_id);
+        if(isset($classroom))
         {
-            if (auth()->user()->can('getStudents' , classroom::find($class_id))) 
-                return response()->json(classroom::find($class_id)->students);
+            if (auth()->user()->can('getStudents' , $classroom)) 
+                return response()->json($classroom->students);
             else 
                 return response()->json([
                     "Message" => "Not Authorized"
@@ -80,9 +91,9 @@ class TeacherController extends Controller
     }
     public function attendance($class_id , $student_id)
     {
-
-        if (classroom::where("id" , $class_id)->exists() && classroom::find($class_id)->students->contains(Student::find($student_id)) )
-            $student = classroom::find($class_id)->first()->students->find($student_id); 
+        $classroom = classroom::find($class_id);
+        if (isset($classroom) && $classroom->students->contains(Student::find($student_id)))
+            $student = Student::find($student_id);
         else
             return response()->json([
                 "message" => "Not found"
@@ -93,7 +104,7 @@ class TeacherController extends Controller
             'date' => 'required|date'
         ]); 
 
-        if (auth()->user()->can("setAttendance" ,classroom::find($class_id)))
+        if (auth()->user()->can("setAttendance" ,$classroom ))
         {
             auth()->user()->attendances()->create(
             [

@@ -10,15 +10,27 @@ class ClassroomController extends Controller
 {
     public function index()
     {
-        $classroom = auth()->user()->classrooms;
-        return response()->json($classroom, 200);
+        $classroom = classroom::get();
+        if (auth()->user()->can('viewAny' , classroom::class))
+            if (count($classroom != 0))
+                return response()->json($classroom, 200);
+            else 
+                return response()->json([
+                    "message" => "No Classes Found"
+                  ], 404);
+        else 
+            return response()->json([
+                "Message" => "Not Authorized"
+            ],403);  
+                  
     }
     public function read($class_id)
     {
-        if(classroom::where('id' , $class_id)->exists())
+        $classroom = classroom::find($class_id);
+        if(isset($classroom))
         {
-        if (auth()->user()->can('view' ,classroom::find($class_id)))
-            return response()->json(auth()->user()->classrooms()->find($class_id), 200);
+        if (auth()->user()->can('view' ,$classroom))
+            return response()->json($classroom, 200);
 
         else 
             return response()->json([
@@ -59,11 +71,13 @@ class ClassroomController extends Controller
     }
     public function delete($class_id)
     {
-        if(classroom::where("id" , $class_id)->exists())
+        
+        $classroom = classroom::find($class_id);
+        if(isset($classroom))
         {
-            if (auth()->user()->can('delete' ,classroom::find($class_id)))
+            if (auth()->user()->can('delete' ,$classroom))
             {
-                classroom::find($class_id)->delete();
+                $classroom->delete();
                 return response()->json([
                     "message" => "Deleted"
                   ], 202);
@@ -82,11 +96,12 @@ class ClassroomController extends Controller
     }
     public function edit($class_id)
     {
-        if(classroom::where("id" , $class_id)->exists())
+        $classroom = classroom::find($class_id);
+        if(isset($classroom))
         {
-            if (auth()->user()->can('update' ,classroom::find($class_id)))
+            if (auth()->user()->can('update' ,$classroom))
             {
-                auth()->user()->classrooms()->find($class_id)->update(request()->validate(
+                $classroom->update(request()->validate(
                 [
                     'classname' => 'required',
                     'grade_id' => ['required' , "exists:grades,id"]

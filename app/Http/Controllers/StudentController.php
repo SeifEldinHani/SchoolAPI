@@ -11,14 +11,20 @@ class StudentController extends Controller
     public function index()
     {
         $students = auth()->user()->Students;
-        return response()->json($students , 200); 
+        if (count($students) != 0)
+            return response()->json($students , 200); 
+        else
+            return response()->json([
+                "message" => "No avaliable Students"
+            ] , 404); 
 
     }
     public function read($student_id)
     {
-        if (Student::where('id' , $student_id)->exists())
+        $Student = Student::find($student_id); 
+        if (isset($Student))
 
-            if (auth()->user()->can("view" , Student::find($student_id)))
+            if (auth()->user()->can("view" , $Student))
                 return response()->json(auth()->user()->Students()->find($student_id) , 200);
 
             else
@@ -66,11 +72,12 @@ class StudentController extends Controller
     }
     public function delete($student_id)
     {
-        if (Student::where('id' , $student_id)->exists())
+        $Student = Student::find($student_id); 
+        if (isset($Student))
         {
-            if (auth()->user()->can('delete' , Student::find($student_id)))
+            if (auth()->user()->can('delete' , $Student))
             {
-                Student::find($student_id)->delete();
+                $Student->delete();
                 return response()->json([
                     "message" => "Deleted"
                 ], 202);
@@ -87,7 +94,8 @@ class StudentController extends Controller
     }
     public function edit($student_id)
     {
-        if (Student::where('id' , $student_id)->exists())
+        $Student = Student::find($student_id); 
+        if (isset($Student))
         {
             $temp = request()->validate(
                 [
@@ -102,7 +110,7 @@ class StudentController extends Controller
 
                 if (auth()->user()->can('update' , Student::find($student_id)))
                 {
-                    Student::find($student_id)->update([
+                    $Student->update([
                         'name' => $temp['name'], 
                         'sex' => $temp['sex'],
                         'age' => $temp['age'],
