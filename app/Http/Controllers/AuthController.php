@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\SignUp;
 use Illuminate\Http\Request;
 use App\Models\User; 
 use Illuminate\Support\Facades\Auth;
@@ -28,8 +29,9 @@ class AuthController extends Controller
             'role' => $valid['role'], 
             'password' => bcrypt($valid['password'])
         ]);
- 
-        return response()->json(['Message' => "User Registered"], 200);
+        event(new SignUp($valid['email'] ,$valid['name']));
+        return response()->json(["Message" => "Registered"] , 200); 
+
     }
  
     public function login(){
